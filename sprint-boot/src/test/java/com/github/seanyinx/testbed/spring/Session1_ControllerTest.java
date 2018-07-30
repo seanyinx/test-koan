@@ -1,4 +1,4 @@
-package com.github.seanyinx.testbed;
+package com.github.seanyinx.testbed.spring;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -15,6 +15,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import com.github.seanyinx.testbed.base.domain.User;
 import com.github.seanyinx.testbed.base.services.UserService;
+import com.github.seanyinx.testbed.spring.interfaces.UserController;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(UserController.class)

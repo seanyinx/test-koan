@@ -1,4 +1,4 @@
-package com.github.seanyinx.testbed;
+package com.github.seanyinx.testbed.spring.interfaces;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -14,7 +14,7 @@ import com.github.seanyinx.testbed.base.services.UserService;
 
 @Controller
 @RequestMapping("/users")
-class UserController {
+public class UserController {
 
   private final UserService userService;
 

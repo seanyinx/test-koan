@@ -1,4 +1,4 @@
-package com.github.seanyinx.testbed;
+package com.github.seanyinx.testbed.spring;
 
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
