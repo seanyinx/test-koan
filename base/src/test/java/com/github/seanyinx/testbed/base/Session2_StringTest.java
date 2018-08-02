@@ -13,27 +13,27 @@ public class Session2_StringTest {
   public void shouldBeEqual() {
     String a = "abc";
 
-    assertThat(a);
+    assertThat(a).isEqualTo("abc");
   }
 
   @Test
   public void shouldHaveSize() {
     String a = "abc";
 
-    assertThat(a);
+    assertThat(a).hasSize(3);
   }
 
   @Test
   public void shouldStartWith() {
     String a = uniquify("abc");
 
-    assertThat(a);
+    assertThat(a).startsWith("abc");
   }
 
   @Test
   public void shouldContain() {
     String a = uniquify("") + uniquify("abc");
 
-    assertThat(a);
+    assertThat(a).contains("abc");
   }
 }

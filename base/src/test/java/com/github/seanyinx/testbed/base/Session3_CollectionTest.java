@@ -18,14 +18,14 @@ public class Session3_CollectionTest {
   public void shouldHaveSize() {
     List<String> alphabets = asList("a", "b", "c");
 
-    assertThat(alphabets);
+    assertThat(alphabets).hasSize(3);
   }
 
   @Test
   public void shouldContainAll() {
     List<String> alphabets = asList("a", "b", "c");
 
-    assertThat(alphabets);
+    assertThat(alphabets).containsExactly("a", "b", "c");
   }
 
   @Test
@@ -33,7 +33,7 @@ public class Session3_CollectionTest {
     List<String> alphabets = new ArrayList<>(asList("a", "b", "c"));
     Collections.shuffle(alphabets);
 
-    assertThat(alphabets);
+    assertThat(alphabets).containsExactlyInAnyOrder("a", "b", "c");
   }
 
   @Test
@@ -46,6 +46,6 @@ public class Session3_CollectionTest {
       }
     }
 
-    assertThat(alphabets);
+    assertThat(alphabets).contains("a", "b", "c");
   }
 }
