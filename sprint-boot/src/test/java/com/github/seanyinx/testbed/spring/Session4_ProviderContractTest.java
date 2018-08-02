@@ -18,6 +18,7 @@ import com.github.seanyinx.testbed.base.services.UserService;
 
 import au.com.dius.pact.provider.junit.PactRunner;
 import au.com.dius.pact.provider.junit.Provider;
+import au.com.dius.pact.provider.junit.State;
 import au.com.dius.pact.provider.junit.loader.PactFolder;
 import au.com.dius.pact.provider.junit.target.HttpTarget;
 import au.com.dius.pact.provider.junit.target.Target;
@@ -47,10 +48,12 @@ public class Session4_ProviderContractTest {
     context.close();
   }
 
+  @State("User Sean exists")
   public void returnExistingUser() {
     when(userService.findUser(1L)).thenReturn(Optional.of(new User(1L, "Sean")));
   }
 
+  @State("User Jack does not exist")
   public void rejectUnknownUser() {
     when(userService.findUser(2L)).thenReturn(Optional.empty());
   }
