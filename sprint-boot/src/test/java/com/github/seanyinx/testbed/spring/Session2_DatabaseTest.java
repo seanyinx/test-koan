@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +18,8 @@ import com.github.seanyinx.testbed.spring.domain.UserEntity;
 import com.github.seanyinx.testbed.spring.infrastructure.UserRepo;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = MainApp.class)
+@Transactional
 public class Session2_DatabaseTest {
   @Autowired
   private UserRepo userRepo;
