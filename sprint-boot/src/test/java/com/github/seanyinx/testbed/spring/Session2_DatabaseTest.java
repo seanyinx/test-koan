@@ -30,6 +30,7 @@ public class Session2_DatabaseTest {
     Optional<UserEntity> user = userRepo.findById(1L);
 
     assertThat(user).isPresent();
+    assertThat(user.get().getName()).isEqualTo("jack");
   }
 
   @Test
