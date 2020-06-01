@@ -24,7 +24,6 @@
     <log4j.version>2.6.2</log4j.version>
     <disruptor.version>3.3.6</disruptor.version>
     <maven.javadoc.skip>true</maven.javadoc.skip>
-    <pact.version>3.5.18</pact.version>
   </properties>
 
   <dependencyManagement>
@@ -124,58 +123,6 @@
         <artifactId>rest-assured</artifactId>
         <version>3.0.7</version>
         <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>au.com.dius</groupId>
-        <artifactId>pact-jvm-consumer_2.11</artifactId>
-        <version>${pact.version}</version>
-        <scope>test</scope>
-        <exclusions>
-          <exclusion>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>au.com.dius</groupId>
-        <artifactId>pact-jvm-consumer-junit_2.11</artifactId>
-        <version>${pact.version}</version>
-        <scope>test</scope>
-        <exclusions>
-          <exclusion>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>*</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>au.com.dius</groupId>
-        <artifactId>pact-jvm-provider_2.11</artifactId>
-        <version>${pact.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>au.com.dius</groupId>
-        <artifactId>pact-jvm-provider-junit_2.11</artifactId>
-        <version>${pact.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>au.com.dius</groupId>
-        <artifactId>pact-jvm-model_2.11</artifactId>
-        <version>${pact.version}</version>
-        <scope>test</scope>
-        <exclusions>
-          <exclusion>
-            <groupId>org.codehaus.groovy.modules.http-builder</groupId>
-            <artifactId>http-builder</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>*</artifactId>
-          </exclusion>
-        </exclusions>
       </dependency>
     </dependencies>
   </dependencyManagement>
