@@ -18,6 +18,7 @@ public class Session3_CollectionTest {
   public void shouldHaveSize() {
     List<String> alphabets = asList("a", "b", "c");
 
+    // TODO: complete the assertion below: alphabets have size 3
     assertThat(alphabets);
   }
 
@@ -25,6 +26,7 @@ public class Session3_CollectionTest {
   public void shouldContainAll() {
     List<String> alphabets = asList("a", "b", "c");
 
+    // TODO: complete the assertion below: alphabets contain "a", "b", "c"
     assertThat(alphabets);
   }
 
@@ -33,6 +35,7 @@ public class Session3_CollectionTest {
     List<String> alphabets = new ArrayList<>(asList("a", "b", "c"));
     Collections.shuffle(alphabets);
 
+    // TODO: complete the assertion below: alphabets contain "a", "b", "c" in any order
     assertThat(alphabets);
   }
 
@@ -46,6 +49,7 @@ public class Session3_CollectionTest {
       }
     }
 
+    // TODO: complete the assertion below: alphabets have item "a", "b", and "c"
     assertThat(alphabets);
   }
 }

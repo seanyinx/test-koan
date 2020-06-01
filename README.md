@@ -6,6 +6,10 @@ It includes the following modules:
 * spring-boot
 * integration
 
+## Restrictions: 
+* you are not allowed to change the test cases or production code.
+* you shall only add assertions / mocking / configuration / annotations / dependencies to tests
+
 ## base
 test cases for pure java code with:
 * Primitive types
@@ -18,7 +22,6 @@ test cases for pure java code with:
 common test scenarios for spring boot applications like:
 * Controller
 * Database
-* Rest API with consumer driven contract
 
 ## integration
 integration tests with external dependencies using Docker

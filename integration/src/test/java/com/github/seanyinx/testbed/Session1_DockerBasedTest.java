@@ -8,6 +8,7 @@ public class Session1_DockerBasedTest {
 
   @Test
   public void shouldFetchDataFromCache() throws Exception {
+    // TODO: make test pass with RedisContainer
     RedisCache cache = new RedisCache("localhost", 6379);
 
     cache.put("foo", "bar");

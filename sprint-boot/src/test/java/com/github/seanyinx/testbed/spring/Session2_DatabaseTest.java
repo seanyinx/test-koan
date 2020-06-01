@@ -15,6 +15,7 @@ import com.github.seanyinx.testbed.base.services.UserService;
 import com.github.seanyinx.testbed.spring.domain.UserEntity;
 import com.github.seanyinx.testbed.spring.infrastructure.UserRepo;
 
+// TODO: make test cases pass by including h2 database, inserting data in test/resources/data.sql, and transactional
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class Session2_DatabaseTest {

@@ -13,7 +13,7 @@ public class Session1_PrimitiveTest {
   public void shouldBeOne() {
     int a = 1;
 
-    assertThat(a);
+    // TODO: complete the assertion below: a == 1
     assertThat(a);
   }
 
@@ -21,7 +21,7 @@ public class Session1_PrimitiveTest {
   public void shouldBeGreaterThanOne() {
     int a = 1 + random.nextInt();
 
-    assertThat(a);
+    // TODO: complete the assertion below: a >= 1
     assertThat(a);
   }
 
@@ -29,6 +29,7 @@ public class Session1_PrimitiveTest {
   public void shouldBeInRange() {
     int a = 1 + random.nextInt(100);
 
+    // TODO: complete the assertion below: 0 < a < 100
     assertThat(a);
   }
 
@@ -36,6 +37,7 @@ public class Session1_PrimitiveTest {
   public void shouldBeCloseTo() {
     double a = 10.d / 3.d;
 
+    // TODO: complete the assertion below: a is close to 3.33d
     assertThat(a);
   }
 }

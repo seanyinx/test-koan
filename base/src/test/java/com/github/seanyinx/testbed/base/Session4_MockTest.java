@@ -16,6 +16,7 @@ public class Session4_MockTest {
 
   @Test
   public void shouldFindUser() {
+    // TODO: use Mockito.when to mock behavior of userRepository
     UserService userService = new UserService(userRepository);
 
     Optional<User> user = userService.findUser(0L);
@@ -26,6 +27,7 @@ public class Session4_MockTest {
 
   @Test
   public void shouldSaveUser() {
+    // TODO: use Mockito.doAnswer to mock behavior of userRepository
     UserService userService = new UserService(userRepository);
 
     long userId = userService.save(user);
@@ -35,16 +37,19 @@ public class Session4_MockTest {
 
   @Test
   public void shouldSaveUserOnceOnly() {
+    // TODO: use Mockito.doAnswer to mock behavior of userRepository
     UserService userService = new UserService(userRepository);
 
     userService.save(user);
     long userId = userService.save(user);
 
     assertThat(userId).isOne();
+    // TODO: use Mockito.verify to ensure userRepository.save is called only once
   }
 
   @Test (expected = IllegalStateException.class)
   public void shouldThrowIfDatabaseIsDown() {
+    // TODO: use Mockito.when to throw exception
     UserService userService = new UserService(userRepository);
 
     userService.findUser(0L);

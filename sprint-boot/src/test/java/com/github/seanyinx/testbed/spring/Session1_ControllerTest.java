@@ -32,6 +32,7 @@ public class Session1_ControllerTest {
   public void shouldReturnExpectedUser() throws Exception {
     when(userService.findUser(1L)).thenReturn(Optional.of(jack));
 
+    // TODO: check response status and response body
     mockMvc.perform(get("/users/{id}", 1));
   }
 
@@ -39,6 +40,7 @@ public class Session1_ControllerTest {
   public void shouldReturn500() throws Exception {
     when(userService.findUser(1L)).thenReturn(Optional.empty());
 
+    // TODO: check response status and response body
     mockMvc.perform(get("/users/{id}", 1));
   }
 }

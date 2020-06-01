@@ -13,6 +13,7 @@ public class Session2_StringTest {
   public void shouldBeEqual() {
     String a = "abc";
 
+    // TODO: complete the assertion below: a is equal to "abc"
     assertThat(a);
   }
 
@@ -20,6 +21,7 @@ public class Session2_StringTest {
   public void shouldHaveSize() {
     String a = "abc";
 
+    // TODO: complete the assertion below: a has size 3
     assertThat(a);
   }
 
@@ -27,6 +29,7 @@ public class Session2_StringTest {
   public void shouldStartWith() {
     String a = uniquify("abc");
 
+    // TODO: complete the assertion below: a starts with "abc"
     assertThat(a);
   }
 
@@ -34,6 +37,7 @@ public class Session2_StringTest {
   public void shouldContain() {
     String a = uniquify("") + uniquify("abc");
 
+    // TODO: complete the assertion below: a contains "abc"
     assertThat(a);
   }
 }

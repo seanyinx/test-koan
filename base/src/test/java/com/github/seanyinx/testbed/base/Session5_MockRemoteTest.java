@@ -20,11 +20,13 @@ public class Session5_MockRemoteTest {
 
   @BeforeClass
   public static void setUp() {
+    // TODO: mock response of remote service
     stubFor(get(urlEqualTo("/users/1")));
   }
 
   @Test
   public void shouldAdaptJsonToUser() {
+    // TODO: mock response of remote service
     UserFetcher fetcher = new UserFetcher("http://localhost:" + wireMockRule.port());
 
     User user = fetcher.fetch(1L);
