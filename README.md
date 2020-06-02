@@ -25,9 +25,3 @@ common test scenarios for spring boot applications like:
 
 ## integration
 integration tests with external dependencies using Docker
-
-**Note**: if you are using Docker Toolbox on Windows, you have to downgrade testcontainers to version `1.5.1`,
-and add `checks.disable=true` to `$HOME/.testcontainers.properties`.
-
-Not doing so, you may have a docker container startup error as follows:
-`{"invalid volume specification: 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\.testcontainers-tmp-8195821502169083677:/dummy:ro'"}`

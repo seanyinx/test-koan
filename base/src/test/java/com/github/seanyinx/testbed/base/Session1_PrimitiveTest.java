@@ -19,7 +19,7 @@ public class Session1_PrimitiveTest {
 
   @Test
   public void shouldBeGreaterThanOne() {
-    int a = 1 + random.nextInt();
+    int a = 1 + random.nextInt(5);
 
     // TODO: complete the assertion below: a >= 1
     assertThat(a);
@@ -29,7 +29,7 @@ public class Session1_PrimitiveTest {
   public void shouldBeInRange() {
     int a = 1 + random.nextInt(100);
 
-    // TODO: complete the assertion below: 0 < a < 100
+    // TODO: complete the assertion below: 0 < a <= 100
     assertThat(a);
   }
 
