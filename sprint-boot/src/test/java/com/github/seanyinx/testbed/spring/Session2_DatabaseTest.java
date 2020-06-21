@@ -17,7 +17,7 @@ import com.github.seanyinx.testbed.spring.infrastructure.UserRepo;
 
 // TODO: make test cases pass by including h2 database, inserting data in test/resources/data.sql, and transactional
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = MainApp.class)
 public class Session2_DatabaseTest {
   @Autowired
   private UserRepo userRepo;

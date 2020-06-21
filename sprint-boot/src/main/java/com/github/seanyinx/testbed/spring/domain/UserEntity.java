@@ -1,11 +1,6 @@
 package com.github.seanyinx.testbed.spring.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
 public class UserEntity {
-  @Id
   private long id;
 
   private String name;

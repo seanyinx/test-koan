@@ -19,7 +19,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
 
-    <spring.boot.version>2.0.0.RELEASE</spring.boot.version>
+    <spring.boot.version>2.0.9.RELEASE</spring.boot.version>
     <slf4j.version>1.7.25</slf4j.version>
     <log4j.version>2.6.2</log4j.version>
     <disruptor.version>3.3.6</disruptor.version>
@@ -115,7 +115,7 @@
       <dependency>
         <groupId>org.testcontainers</groupId>
         <artifactId>testcontainers</artifactId>
-        <version>1.14.1</version>
+         <version>1.14.1</version>
         <scope>test</scope>
       </dependency>
       <dependency>
