@@ -24,6 +24,7 @@
     <log4j.version>2.6.2</log4j.version>
     <disruptor.version>3.3.6</disruptor.version>
     <maven.javadoc.skip>true</maven.javadoc.skip>
+    <pact.version>4.0.10</pact.version>
   </properties>
 
   <dependencyManagement>
@@ -103,7 +104,7 @@
       <dependency>
         <groupId>com.github.tomakehurst</groupId>
         <artifactId>wiremock-standalone</artifactId>
-        <version>2.6.0</version>
+        <version>2.26.3</version>
         <scope>test</scope>
       </dependency>
       <dependency>
@@ -122,6 +123,42 @@
         <groupId>io.rest-assured</groupId>
         <artifactId>rest-assured</artifactId>
         <version>3.0.7</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>au.com.dius</groupId>
+        <artifactId>pact-jvm-consumer</artifactId>
+        <version>${pact.version}</version>
+        <scope>test</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>au.com.dius</groupId>
+        <artifactId>pact-jvm-consumer-junit</artifactId>
+        <version>${pact.version}</version>
+        <scope>test</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>au.com.dius</groupId>
+        <artifactId>pact-jvm-provider</artifactId>
+        <version>${pact.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>au.com.dius</groupId>
+        <artifactId>pact-jvm-provider-junit</artifactId>
+        <version>${pact.version}</version>
         <scope>test</scope>
       </dependency>
     </dependencies>

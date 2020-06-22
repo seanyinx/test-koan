@@ -10,23 +10,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import com.atlassian.ta.wiremockpactgenerator.WireMockPactGenerator;
 import com.github.seanyinx.testbed.base.domain.User;
 import com.github.seanyinx.testbed.base.services.UserFetcher;
+import com.github.tomakehurst.wiremock.admin.model.ListStubMappingsResult;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
-import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
 
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = MainApp.class)
-//@AutoConfigureWireMock(port = 0)
 public class Session3_ConsumerContractTest {
-
-//  @MockBean
-//  private UserService userService;
-
-//  @Autowired
-//  private Environment environment;
 
   @ClassRule
   public static final WireMockRule wireMockRule = new WireMockRule(wireMockConfig().dynamicPort());
@@ -42,14 +33,15 @@ public class Session3_ConsumerContractTest {
 
   @AfterClass
   public static void tearDown() throws Exception {
+    // TODO: 2020/6/22 register all stub mapping with wiremock client with aop on WireMockRule
+    ListStubMappingsResult x = wireMockRule.listAllStubMappings();
+    System.out.println(x);
     wireMockRule.saveMappings();
   }
 
   @Test
   public void userSeanExists() {
     stubFor(get(urlEqualTo("/users/1"))
-        .inScenario("User Sean exists")
-        .withName("User Sean exists")
         .willReturn(aResponse()
             .withStatus(200)
             .withHeader("Content-Type", "application/json")
@@ -70,8 +62,6 @@ public class Session3_ConsumerContractTest {
   @Test(expected = IllegalStateException.class)
   public void userJackMissing() {
     stubFor(get(urlEqualTo("/users/2"))
-        .inScenario("User Jack does not exist")
-        .withName("User Jack does not exist")
         .willReturn(aResponse()
             .withStatus(500)));
 

@@ -1,4 +1,4 @@
-package com.github.seanyinx.testbed.spring;
+package com.github.seanyinx.testbed.spring.interfaces;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -48,12 +48,12 @@ public class Session4_ProviderContractTest {
     context.close();
   }
 
-  @State("User Sean exists")
+  @State({"User Sean exists", "GET /users/1 -> 200"})
   public void returnExistingUser() {
     when(userService.findUser(1L)).thenReturn(Optional.of(new User(1L, "Sean")));
   }
 
-  @State("User Jack does not exist")
+  @State({"User Jack does not exist", "GET /users/2 -> 500"})
   public void rejectUnknownUser() {
     when(userService.findUser(2L)).thenReturn(Optional.empty());
   }
