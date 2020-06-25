@@ -3,6 +3,7 @@ package com.github.seanyinx.testbed.spring.interfaces;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import au.com.dius.pact.provider.junit.loader.PactBroker;
 import java.util.Optional;
 
 import org.junit.AfterClass;
@@ -26,7 +27,8 @@ import au.com.dius.pact.provider.junit.target.TestTarget;
 
 @RunWith(PactRunner.class)
 @Provider("user-service")
-@PactFolder("target/pacts")
+//@PactFolder("target/pacts")
+@PactBroker
 public class Session4_ProviderContractTest {
 
   private static ConfigurableApplicationContext context;

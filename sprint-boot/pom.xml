@@ -14,14 +14,18 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-dependencies</artifactId>
-        <version>${spring.boot.version}</version>
+        <groupId>com.rcplatform.athena</groupId>
+        <artifactId>athena-platform</artifactId>
+        <version>1.2.24-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <properties>
+    <devops.plugin.version>1.0.7-SNAPSHOT</devops.plugin.version>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -87,5 +91,30 @@
       <artifactId>h2</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.rcplatform.athena</groupId>
+      <artifactId>athena-platform-test</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.github.odavid.maven.plugins</groupId>
+        <artifactId>mixin-maven-plugin</artifactId>
+        <version>0.1-alpha-39</version>
+        <extensions>true</extensions>
+        <configuration>
+          <mixins>
+            <mixin>
+              <groupId>com.rcplatform.devops</groupId>
+              <artifactId>code-analysis</artifactId>
+              <version>${devops.plugin.version}</version>
+            </mixin>
+          </mixins>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
